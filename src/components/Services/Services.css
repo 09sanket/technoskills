@@ -1,0 +1,105 @@
+.services {
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    height: 90vh;
+    margin-bottom: 8rem;
+    margin-top: 5rem;
+    margin-bottom: 13rem;
+}
+
+.s-left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* for the first child, i.e. span -> heading 1 */
+.s-left>:nth-child(1) {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* for the second child, i.e. span -> heading 2 */
+.s-left>:nth-child(2) {
+    color: #935EFF;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* for the third child, i.e. span -> sentence */
+.s-left>:nth-child(3) {
+    color: var(--gray);
+    font-size: 15px;
+    margin-top: 1rem;
+    width: 26rem;
+}
+
+.s-button {
+    width: 8rem;
+    height: 2rem;
+    margin-top: 1rem;
+}
+
+.s-right {
+    position: relative;
+}
+
+/* Targeting everything inside the s-right class */
+.s-right>* {
+    position: absolute;
+}
+
+/* blur */
+.s-blur1 {
+    left: -18rem;
+    top: 13rem;
+}
+
+.s-blur2 {
+    left: 14rem;
+    top: 8rem;
+}
+
+/* Adding hover effect and animation */
+.s-left>:hover,
+.s-right>:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.s-left>:hover {
+    color: var(--orange); /* Add color change for hover */
+}
+
+.s-right>:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/*  for responsiveness */
+@media screen and (max-width: 840px) {
+    .services {
+        margin-top: 13rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5rem;
+        height: 66rem;
+        padding: 0;
+        
+    }
+
+    .s-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 1rem;
+        gap: 20rem;
+        width: max-content;
+        height: max-content;
+    }
+
+    .s-right>* {
+        position: static;
+    }
+}

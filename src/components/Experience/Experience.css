@@ -1,0 +1,92 @@
+.experience {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    height: 30vh;
+    margin-bottom: 8rem;
+    /* margin-top: 13rem; */
+}
+
+.achievement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    width: 4rem;
+    height: 4rem;
+    background: white;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 1rem = 16px */
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 1.7rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* The ::before selector inserts something before the content of each selected element */
+.circle::before {
+    border-radius: 100%;
+    content: '';
+    background-image: linear-gradient(to bottom, #87e6fb 0%, #935EFF 100%);
+    top: -8px;
+    left: -8px;
+    bottom: -8px;
+    right: -8px;
+    position: absolute;
+    z-index: -1;
+    box-shadow: var(--boxShadow);
+}
+
+/* Third child of the achievement class i.e. span */
+.achievement>:nth-child(3) {
+    color: var(--orange);
+}
+
+.circle:hover {
+    cursor: pointer;
+    background: var(--blueCard);
+    text-shadow: 0px 0px 30px var(--blueCard);
+    transform: scale(1.1); /* Zoom-in effect */
+    box-shadow: 0px 0px 20px var(--blueCard); /* Adding a shadow on hover */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.achievement:hover {
+    cursor: pointer;
+    color: rebeccapurple;
+    transform: scale(1.05); /* Slight zoom effect on the whole achievement box */
+    transition: transform 0.3s ease-in-out;
+}
+
+.achievement>:nth-child(3):hover {
+    cursor: pointer;
+    color: rebeccapurple;
+    transform: scale(1.1); /* Zoom-in on the text */
+    transition: transform 0.3s ease-in-out;
+}
+
+/*  for responsiveness */
+@media screen and (max-width: 480px) {
+    .experience {
+        display: flex;
+        flex-direction: column;
+        width: cover;
+        margin-top: 3rem;
+        gap: 1.8rem;
+    }
+
+    .achievement>* {
+        font-size: 0.9rem;
+    }
+
+    .circle.thirdCir {
+        top: 0.1rem;
+    }
+}

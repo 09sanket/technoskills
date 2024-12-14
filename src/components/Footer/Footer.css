@@ -1,0 +1,150 @@
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three-column grid layout */
+    align-items: center;
+    margin: -0.5rem -3.5rem;
+    margin-top: 7rem;
+    height: 12rem;
+    
+    /* background-color: #282828; Dark background for footer */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adding subtle shadow */
+    padding: 1rem; /* Padding for better spacing */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.footer:hover {
+    background-color: #353535; /* Slightly lighter background on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.f-left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: -2rem;
+    padding-left: 3.5rem;
+}
+
+.f-left>:nth-of-type(1) {
+    color: var(--white); /* Change text color to white */
+    font-size: 15px;
+    width: 22rem;
+    margin-top: 0.7rem;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and zoom */
+}
+
+.f-left>:nth-of-type(1):hover {
+    color: #ffffff; /* Change text color to white on hover */
+    transform: scale(1.1); /* Zoom-in effect */
+}
+
+.f-mid {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: -1rem;
+    padding-left: 7.5rem;
+}
+
+.f-mid>span {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: var(--white); /* Change text color to white */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and zoom */
+}
+
+.f-mid>span:hover {
+    color: #ffffff; /* Change text color to white on hover */
+    transform: scale(1.1); /* Zoom-in effect */
+}
+
+.f-right {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-left: 5rem;
+    margin-top: -2rem;
+    display: grid;
+    text-align: center;
+    color: var(--white); /* Change text color to white */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for zoom and color */
+    justify-items: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.f-right>span {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for zoom and color */
+}
+
+.f-right>span:hover {
+    color: #ffffff; /* Change text color to white on hover */
+    transform: scale(1.1); /* Zoom-in effect */
+}
+
+#f-social {
+    color: #454545;
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+    display: flex; /* Use flex for centering */
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Center icons vertically */
+    gap: 1rem; /* Space between icons */
+    
+}
+
+#f-social:hover {
+    color: #ffffff; /* Change color to white */
+    text-shadow: 0px 0px 30px #ffffff; /* White text shadow */
+    transform: scale(1.2); /* Zoom-in effect */
+    transition: all 0.3s ease-in;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 840px) {
+    .footer {
+        grid-template-columns: 1fr; /* Change grid layout to single column */
+        height: auto; /* Adjust height for smaller screen sizes */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .f-left {
+        display: none; /* Hide left section on small screens */
+    }
+
+    .f-mid {
+        margin-left: 0; /* Adjust margin */
+        padding-left: 0; /* Remove left padding */
+        text-align: center; /* Center text */
+    }
+
+    .f-mid>span {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        margin-bottom: 1rem; /* Adjust margin */
+    }
+
+    .f-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center the content */
+        margin-top: 1rem; /* Adjust margin */
+        margin-left: -4rem;
+    }
+
+    .f-right>span {
+        font-size: 18px; /* Adjust font size */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    #f-social {
+        font-size: 2rem; /* Increase social icon size */
+        text-align: center; /* Center the social icons */
+        gap: 1.5rem; /* Adjust gap for smaller screens */
+    }
+}
