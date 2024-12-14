@@ -5,10 +5,10 @@ import "./Intro.css";
 import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
 import user from "../../img/user3.png";
-import thumbup from "../../img/thumbup.png";
-import Crown from "../../img/crown.png";
+// import thumbup from "../../img/thumbup.png";
+// import Crown from "../../img/crown.png";
 import glassemojy from "../../img/glassemojy.png";
-import FloatingDiv from "../FloatingDiv/FloatingDiv";
+// import FloatingDiv from "../FloatingDiv/FloatingDiv";
 
 const Intro = () => {
   return (
