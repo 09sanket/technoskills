@@ -7,6 +7,13 @@ import profilePic5 from "../img/profile6.jpeg";
 
 export const TestimonialData = [
   {
+    img: profilePic1,
+    review:
+      "I never thought I could learn coding until I joined Techno Skills Coaching Classes. The team made the entire learning process so engaging and accessible, and I quickly fell in love with coding. I gained a solid understanding of Java, Data Structures, and Algorithms, which helped me land my first job as an SDE. I’m incredibly thankful to the team for their dedication to my growth.",
+    name: "Raunit Raj",
+    status: "B.Tech Student ",
+  },
+  {
     img: profilePic2,
     review:
       "Thanks to the team at Techno Skills Coaching Classes, I learned C++ and DSA, which helped me crack multiple job offers. The Web Development course was well-structured, with great projects that gave me hands-on experience. I highly recommend this course to anyone aiming to kickstart their career in Web Development. Grateful for the support and guidance throughout.",
@@ -34,11 +41,5 @@ export const TestimonialData = [
     name: "Nishant",
     status: "BCA Student",
   },
-  {
-    img: profilePic1,
-    review:
-      "I never thought I could learn coding until I joined Techno Skills Coaching Classes. The team made the entire learning process so engaging and accessible, and I quickly fell in love with coding. I gained a solid understanding of Java, Data Structures, and Algorithms, which helped me land my first job as an SDE. I’m incredibly thankful to the team for their dedication to my growth.",
-    name: "Raunit Raj",
-    status: "B.Tech Student ",
-  },
+  
 ];
